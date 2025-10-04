@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אתר שאני אוהב אותך</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;700&family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="heart-float"></div>
+        <div class="heart-float"></div>
+        <div class="heart-float"></div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="main-title">
+                <i class="fas fa-heart"></i>
+                אני אוהב אותךךךךךךך
+                <i class="fas fa-heart"></i>
+            </h1>
+            <p class="subtitle">כפרה עלייך חיים שלי יפה מלאכית</p>
+        </header>
+
+        <!-- Main Countdown -->
+        <section class="main-countdown">
+            <h2>ימים עד שאת מקבלת חיבוק</h2>
+            <div class="countdown-display" id="mainCountdown">
+                <div class="time-unit">
+                    <span class="number" id="days">0</span>
+                    <span class="label">ימים</span>
+                </div>
+                <div class="time-unit">
+                    <span class="number" id="hours">0</span>
+                    <span class="label">שעות</span>
+                </div>
+                <div class="time-unit">
+                    <span class="number" id="minutes">0</span>
+                    <span class="label">דקות</span>
+                </div>
+                <div class="time-unit">
+                    <span class="number" id="seconds">0</span>
+                    <span class="label">שניות</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Daily Challenge Calendar -->
+        <section class="daily-calendar-section">
+            <h3>🗓️ לוח האתגרים היומי</h3>
+            <p class="calendar-intro">כל יום כשאני בויאטנם יש אתגר מיוחד כי את יפה! מלאכית</p>
+            <div class="calendar-grid" id="calendarGrid"></div>
+        </section>
+
+        <!-- Progress Bar -->
+        <section class="progress-section">
+            <h3>התקדמות הטיול</h3>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+            <p class="progress-text" id="progressText">0% הושלם</p>
+        </section>
+
+        <!-- Games Section -->
+        <section class="games-section">
+            <h3>משחקים ואתגרים 🎮</h3>
+            <p class="games-intro">משחקים חמודים תלחצי תראי!</p>
+            
+            <div class="games-grid">
+                <!-- Memory Game -->
+                <div class="game-card" id="memoryCard">
+                    <div class="game-icon">🎴</div>
+                    <h4>משחק הזיכרון</h4>
+                    <p>מצאי את כל הזוגות של תמונות שלנו</p>
+                    <div class="game-timer" id="memoryTimer">
+                        <i class="fas fa-clock"></i>
+                        <span>נפתח בקרוב...</span>
+                    </div>
+                    <button class="game-btn" id="memoryBtn" disabled>
+                        <i class="fas fa-lock"></i> נעול
+                    </button>
+                </div>
+
+                <!-- Word Scramble Game -->
+                <div class="game-card" id="scrambleCard">
+                    <div class="game-icon">🔤</div>
+                    <h4>פענוח מילים</h4>
+                    <p>סדרי את האותיות ומצאי את המילה</p>
+                    <div class="game-timer" id="scrambleTimer">
+                        <i class="fas fa-clock"></i>
+                        <span>נפתח בקרוב...</span>
+                    </div>
+                    <button class="game-btn" id="scrambleBtn" disabled>
+                        <i class="fas fa-lock"></i> נעול
+                    </button>
+                </div>
+
+                <!-- Quiz Game -->
+                <div class="game-card" id="quizCard">
+                    <div class="game-icon">❓</div>
+                    <h4>חידון טריוויה</h4>
+                    <p>עני נכונה על כל השאלות</p>
+                    <div class="game-timer" id="quizTimer">
+                        <i class="fas fa-clock"></i>
+                        <span>נפתח בקרוב...</span>
+                    </div>
+                    <button class="game-btn" id="quizBtn" disabled>
+                        <i class="fas fa-lock"></i> נעול
+                    </button>
+                </div>
+
+                <!-- Song Recognition Game -->
+                <div class="game-card" id="songCard">
+                    <div class="game-icon">🎵</div>
+                    <h4>נחשי את השיר</h4>
+                    <p>שמעי קטע קצר וזהי את השיר</p>
+                    <div class="game-timer" id="songTimer">
+                        <i class="fas fa-clock"></i>
+                        <span>נפתח בקרוב...</span>
+                    </div>
+                    <button class="game-btn" id="songBtn" disabled>
+                        <i class="fas fa-lock"></i> נעול
+                    </button>
+                </div>
+
+                <!-- Love Calculator Game -->
+                <div class="game-card" id="loveCalcCard">
+                    <div class="game-icon">💕</div>
+                    <h4>מחשבון האהבה</h4>
+                    <p>בדקי את רמת האהבה של שני אנשים</p>
+                    <div class="game-timer" id="loveCalcTimer">
+                        <i class="fas fa-clock"></i>
+                        <span>נפתח בקרוב...</span>
+                    </div>
+                    <button class="game-btn" id="loveCalcBtn" disabled>
+                        <i class="fas fa-lock"></i> נעול
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Reveal Section -->
+        <section class="reveal-section" id="revealSection" style="display: none;">
+            <div class="reveal-content">
+                <h2>🎉 הפתעה! 🎉</h2>
+                <p>לחצי על הכפתור כדי לגלות את ההפתעה המיוחדת...</p>
+                <button class="reveal-btn" id="revealBtn">
+                    <i class="fas fa-gift"></i> גלי את ההפתעה
+                </button>
+            </div>
+        </section>
+
+        <!-- Dev Reset Button (hidden by default) -->
+        <button class="dev-reset-btn" id="devResetBtn" style="display: none;">
+            <i class="fas fa-redo"></i> איפוס מפתח (Dev Only)
+        </button>
+
+        <!-- Dev Answers Panel (hidden by default) -->
+        <div class="dev-panel" id="devPanel" style="display: none;">
+            <div class="dev-panel-header">
+                <h3>📋 תשובות יומיות (Dev View)</h3>
+                <button class="dev-panel-close" id="closeDevPanel">&times;</button>
+            </div>
+            <div class="dev-panel-content" id="devPanelContent">
+                <p style="text-align: center; color: #999;">אין תשובות שנשמרו עדיין</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Memory Game Modal -->
+    <div class="modal" id="memoryModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeMemory">&times;</button>
+            <h2>🎴 משחק הזיכרון</h2>
+            <p class="modal-subtitle">מצא את כל הזוגות התואמים!</p>
+            
+            <div class="game-stats">
+                <div class="stat">
+                    <span class="stat-label">מהלכים:</span>
+                    <span class="stat-value" id="moves">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">זוגות:</span>
+                    <span class="stat-value" id="pairs">0/8</span>
+                </div>
+            </div>
+
+            <div class="memory-grid" id="memoryGrid"></div>
+            
+            <div class="game-message" id="memoryMessage" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- Scramble Game Modal -->
+    <div class="modal" id="scrambleModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeScramble">&times;</button>
+            <h2>🔤 פענוח מילים</h2>
+            <p class="modal-subtitle">סדר את האותיות ליצירת מילה נכונה!</p>
+            
+            <div class="game-stats">
+                <div class="stat">
+                    <span class="stat-label">מילה:</span>
+                    <span class="stat-value" id="wordProgress">1/5</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">ניסיונות:</span>
+                    <span class="stat-value" id="attempts">0</span>
+                </div>
+            </div>
+
+            <div class="scramble-container">
+                <div class="scrambled-word" id="scrambledWord"></div>
+                <div class="hint-text" id="hintText"></div>
+                <input type="text" id="answerInput" class="answer-input" placeholder="הקלד את התשובה כאן...">
+                <button class="submit-btn" id="submitAnswer">בדוק תשובה</button>
+            </div>
+            
+            <div class="game-message" id="scrambleMessage" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- Quiz Game Modal -->
+    <div class="modal" id="quizModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeQuiz">&times;</button>
+            <h2>❓ חידון טריוויה</h2>
+            <p class="modal-subtitle">ענה נכון על כל השאלות!</p>
+            
+            <div class="game-stats">
+                <div class="stat">
+                    <span class="stat-label">שאלה:</span>
+                    <span class="stat-value" id="quizProgress">1/5</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">נכונות:</span>
+                    <span class="stat-value" id="correctAnswers">0</span>
+                </div>
+            </div>
+
+            <div class="quiz-container">
+                <div class="question" id="question"></div>
+                <div class="options" id="options"></div>
+            </div>
+            
+            <div class="game-message" id="quizMessage" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- Daily Challenge Modal -->
+    <div class="modal" id="dailyChallengeModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeDailyChallenge">&times;</button>
+            <h2 id="dailyChallengeTitle">🌟 אתגר יומי</h2>
+            <p class="modal-subtitle" id="dailyChallengeDate"></p>
+            
+            <div class="daily-challenge-content" id="dailyChallengeContent"></div>
+            
+            <div class="game-message" id="dailyChallengeMessage" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- Song Recognition Modal -->
+    <div class="modal" id="songModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeSong">&times;</button>
+            <h2>🎵 נחש את השיר</h2>
+            <p class="modal-subtitle">שמע את הקטע וזהה את השיר!</p>
+            
+            <div class="game-stats">
+                <div class="stat">
+                    <span class="stat-label">שיר:</span>
+                    <span class="stat-value" id="songProgress">1/5</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">נכונות:</span>
+                    <span class="stat-value" id="songCorrect">0</span>
+                </div>
+            </div>
+
+            <div class="song-container">
+                <div class="audio-player">
+                    <button class="play-btn" id="playSongBtn">
+                        <i class="fas fa-play"></i> נגן קטע
+                    </button>
+                    <div class="audio-progress" id="audioProgress"></div>
+                </div>
+                <div class="song-options" id="songOptions"></div>
+            </div>
+            
+            <div class="game-message" id="songMessage" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- Love Calculator Modal -->
+    <div class="modal" id="loveCalcModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeLoveCalc">&times;</button>
+            <h2>💕 מחשבון האהבה</h2>
+            <p class="modal-subtitle">בדוק את רמת התאימות שלנו!</p>
+            
+            <div class="love-calc-container">
+                <div class="love-input-group">
+                    <label>השם הראשון:</label>
+                    <input type="text" id="name1" class="love-input" placeholder="הכנס שם...">
+                </div>
+                <div class="love-heart">❤️</div>
+                <div class="love-input-group">
+                    <label>השם השני:</label>
+                    <input type="text" id="name2" class="love-input" placeholder="הכנס שם...">
+                </div>
+                <button class="submit-btn" id="calculateLove">חשב אהבה!</button>
+                <div class="love-result" id="loveResult" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
